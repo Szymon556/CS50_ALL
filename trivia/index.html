@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+
+            function check (event)
+            {
+                var triggerObject = event.srcElement;
+
+                if(triggerObject.id == "correct")
+                {
+                    triggerObject.style.backgroundColor = 'green';
+
+                    document.getElementById('answer').innerHTML = 'Correct!'
+
+                }else
+                {
+                    triggerObject.style.backgroundColor = 'red';
+                    document.getElementById('answer').innerHTML = 'Incorrect'
+
+                }
+            }
+
+            function check_long(event)
+            {
+                var triggerObject2 = event.srcElement;
+
+                var input = document.getElementById('input').value
+
+                if(input === 'Rosja')
+                {
+                    triggerObject2.style.backgroundColor='green';
+
+                    document.getElementById("answer2").innerHTML = "Correct!";
+
+                }else
+                {
+                    triggerObject2.style.backgroundColor = 'red';
+                    document.getElementById("answer2").innerHTML = "Incorrect";
+                }
+            }
+
+
+
+
+
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>Kto napisał Chrabiego Monte Christo?</h3>
+
+                <button type = "button"  onclick = "check(event)" class = "inccorect">Czesław Miłosz</button>
+                <button type = "button" onclick = "check(event)" id = "correct">Aleksander Dumas</button>
+                <button type = "button" onclick = "check(event)"  class = "inccorect">Adam Mickiewicz</button>
+                <button type = "button" onclick = "check(event)"  class = "inccorect">Juliusz Słowacki</button>
+                <button type = "button" onclick = "check(event)"  class = "inccorect">Zbigniew Ziobro</button>
+                <!-- TODO: Add multiple choice question here -->
+
+                <p1 id = "answer"></p1>
+
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>Jaki jest największy kraj świata?</h3>
+                <form>
+                    <input type = "text" id = "input">
+
+                    <button type = "button" id = "check_button" onclick = "check_long(event)">Check The Answer</button>
+                </form>
+                <p1 id = "answer2"></p1>
+
+            </div>
+        </div>
+    </body>
+</html>

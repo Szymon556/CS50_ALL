@@ -1,0 +1,13 @@
+{% extends "layout.html"%}
+
+{% block main %}
+    <form action = "/quote" method = "post">
+        <div style = "text-align:left;">
+        <label   for="stockPrice" class="form-label">Sereach Stock Price</label>
+        </div>
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" id="stockPrice" aria-describedby="button-addon2" name = "symbol">
+        <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Sereach</button>
+    </div>
+    </form>
+{% endblock %}

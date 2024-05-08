@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block main %}
+<table class="table">
+    <thead>
+        <tr>
+            <th class="text-start">Symbol</th>
+            <th class="text-end">Shares</th>
+            <th class="text-end">Price</th>
+            <th class="text-end">Transacted</th>
+        </tr>
+    </thead>
+        {% for row in rows %}
+            <tr>
+                <td>{{row["company"]}}</td>
+                <td>{{row["symbol"]}}</td>
+                <td>{{row["shares"]}}</td>
+                <td>{{row["price"]}}</td>
+                <td>{{row["transacted"]}}</td>
+                <td>{{row["type"]}}</td>
+
+            </tr>
+        {% endfor %}
+    <tbody>
+    </tbody>
+</table>
+{% endblock%}

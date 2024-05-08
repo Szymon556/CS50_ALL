@@ -1,0 +1,7 @@
+logs/
+*.tmp
+.vscode/
+.git/
+.ssh/
+.devcontainer.json
+

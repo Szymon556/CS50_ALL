@@ -1,0 +1,33 @@
+.main
+{
+    text-align:center;
+    font-family: 'Open Sans', sans-serif;
+    padding: 0px;
+
+}
+
+.main figcaption
+{
+    margin-top:20px;
+    font-size:17px;
+}
+
+#baton
+{
+    text-align:right;
+    padding-top:30px;
+}
+
+
+
+#mainTitle
+{
+    text-align:center;
+    padding:20px;
+}
+
+#footer
+{
+    text-align:center;
+    padding: 20px;
+}

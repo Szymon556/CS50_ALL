@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block main %}
+<main class="container py-5 text-center">
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th class="text-start">Symbol</th>
+                <th class="text-start">Name</th>
+                <th class="text-end">Shares</th>
+                <th class="text-end">Price</th>
+                <th class="text-end">TOTAL</th>
+            </tr>
+        </thead>
+       <tbody>
+            {% for row in rows %}
+                <tr>
+                    <td>{{row["symbol"]}}</td>
+                    <td>{{row["company"]}}</td>
+                    <td>{{row["shares"]}}</td>
+                    <td>{{row["share_price"]|usd}}</td>
+                    <td>{{row["total_share_price"]|usd}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+        <tfoot>
+            <tr>
+                <td class="border-0 fw-bold text-end" colspan="4">Cash</td>
+                <td class="border-0 text-end">{{owned_cash|usd}}</td>
+            </tr>
+            <tr>
+                <td class="border-0 fw-bold text-end" colspan="4">TOTAL</td>
+                <td class="border-0 w-bold text-end">{{total|usd}}</td>
+            </tr>
+        </tfoot>
+    </table>
+
+        </main>
+{% endblock %}
